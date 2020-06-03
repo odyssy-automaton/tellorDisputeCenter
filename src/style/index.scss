@@ -26,7 +26,10 @@ h6 {
 
 .Hero {
   padding-top: 25px;
-  background-color: black;
+  // background-color: black;
+  // AltHeader
+  background: $gradient;
+  padding-top: 125px;
 }
 
 .View {
@@ -81,8 +84,12 @@ h6 {
 // Header
 
 .ant-layout-header {
-  background: #000;
+  // background: #000;
+  // AltHeader
+  background: transparent;
   height: auto;
+  position: absolute;
+  width: 100%;
 }
 
 // Buttons
@@ -275,6 +282,62 @@ tr.ant-table-expanded-row:hover > td {
 
 .ant-modal-close {
   color: $tellor-green;
+}
+
+// AltHeader
+
+.CurrentEvent {
+  .TableHeader {
+    h2 {
+      color: #252525;
+    }
+  }
+  .ant-table-thead > tr > th {
+    color: #636363;
+  }
+  .ant-table-thead
+    > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+    > td,
+  .ant-table-tbody
+    > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+    > td,
+  .ant-table-thead
+    > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+    > td,
+  .ant-table-tbody
+    > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+    > td {
+    background: rgba(0, 0, 0, 0.05);
+    color: #444444;
+  }
+  .ant-table {
+    background: transparent;
+    font-family: 'Roboto Mono', monospace;
+    &:not(.expanded) {
+      color: #252525;
+    }
+  }
+  .ant-table-row-expand-icon-cell {
+    cursor: pointer;
+    span {
+      pointer-events: none;
+      color: #444444;
+    }
+  }
+  .ant-table-row.expanded {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #151515 !important;
+    &:hover .ant-table-cell {
+      color: #151515 !important;
+    }
+    .ant-table-row-expand-icon-cell {
+      cursor: pointer;
+      span {
+        pointer-events: none;
+        color: #151515;
+      }
+    }
+  }
 }
 
 // Responsive Adjustments

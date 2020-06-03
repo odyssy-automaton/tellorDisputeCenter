@@ -7,7 +7,7 @@ const OpenDisputes = () => {
   const [openDisputes] = useContext(OpenDisputesContext);
 
   return (
-    <div>
+    <div className="CurrentEvent">
       <div className="TableHeader">
         <h2>Open Disputes</h2>
       </div>

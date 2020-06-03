@@ -7,9 +7,12 @@ import { CurrentUserContext } from '../../contexts/Store';
 import { Web3SignIn } from './Web3SignIn';
 import { truncateAddr } from '../../utils/helpers';
 import tellorLogoDark from '../../assets/Tellor__Logo--Dark.png';
+import tellorLogoLight from '../../assets/Tellor__Logo--Light.png';
 
 const StyledHeader = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -27,7 +30,8 @@ const StyledBrandLink = styled.div`
       display: inline-block;
     }
     span {
-      color: #5cfcb6;
+      // color: #5cfcb6;
+      color: #444444;
       font-size: 21px;
       font-weight: 300;
       margin-bottom: -11px;
@@ -52,13 +56,23 @@ const StyledHeaderNav = styled.div`
   > * {
     margin-left: 25px;
     font-size: 1.5em;
-    color: #5cfcb6;
+    // color: #5cfcb6;
+    color: #444444;
+    &:hover {
+      color: #000;
+    }
     &:last-child {
-      border: 2px solid #5cfcb6;
-      color: #5cfcb6;
+      // border: 2px solid #5cfcb6;
+      // color: #5cfcb6;
+      border: 2px solid #444444;
+      color: #444444;
       border-radius: 50px;
       padding: 10px 15px;
       vertical-align: middle;
+      &:hover {
+        border: 2px solid #000;
+        color: #000;
+      }
     }
 
     @media (max-width: 800px) {
@@ -77,7 +91,7 @@ const HeaderNav = () => {
       <StyledHeader>
         <StyledBrandLink>
           <Link to="/">
-            <img alt="tellor-logo" src={tellorLogoDark} />
+            <img alt="tellor-logo" src={tellorLogoLight} />
             <span>dispute center</span>
           </Link>
         </StyledBrandLink>
